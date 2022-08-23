@@ -76,10 +76,13 @@ class QuestionController extends GetxController
   void checkAns(Question question, int selectedIndex) {
     // because once user press any option then it will run
     _isAnswered = true;
-    _correctAns = question.answer;
+    //_correctAns = question.answer;
     _selectedAns = selectedIndex;
 
-    if (_correctAns == _selectedAns) _numOfCorrectAns++;
+    if (0 == selectedIndex) _numOfCorrectAns+=0;
+    else if (1 ==  selectedIndex) _numOfCorrectAns+=1;
+    else if(2 == selectedIndex) _numOfCorrectAns+=2;
+    else if(3 == selectedIndex) _numOfCorrectAns+=3;
 
     // It will stop the counter
     _animationController.stop();

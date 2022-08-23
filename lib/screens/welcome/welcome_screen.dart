@@ -10,7 +10,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+          //SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
@@ -19,16 +19,16 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Spacer(flex: 2), //2/6
                   Text(
-                    "Let's Play Quiz,",
+                    "Let's Asses Emotions",
                     style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                        color: Color.fromARGB(255, 7, 6, 6), fontWeight: FontWeight.bold),
                   ),
                   Text("Enter your informations below"),
                   Spacer(), // 1/6
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFF1C2341),
+                      fillColor: Color.fromARGB(255, 238, 238, 245),
                       hintText: "Full Name",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                       alignment: Alignment.center,
                       padding: EdgeInsets.all(kDefaultPadding * 0.75), // 15
                       decoration: BoxDecoration(
-                        gradient: kPrimaryGradient,
+                        color: kPrimaryGradient,
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
