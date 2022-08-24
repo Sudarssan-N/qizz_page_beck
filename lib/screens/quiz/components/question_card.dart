@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/controllers/question_controller.dart';
-import 'package:quiz_app/models/Questions.dart';
+
+//change the file name for the quiz change to Questions.dart
+//1.body.dart and 2.question_card.dart
+import 'package:quiz_app/models/Question_ham-a.dart';
 
 import '../../../constants.dart';
 import 'option.dart';
@@ -18,7 +21,8 @@ class QuestionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionController _controller = Get.put(QuestionController());
-    return Container(
+    return SingleChildScrollView(
+    child: Container(
       margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       padding: EdgeInsets.all(kDefaultPadding),
       decoration: BoxDecoration(
@@ -34,7 +38,7 @@ class QuestionCard extends StatelessWidget {
                 .headline6
                 .copyWith(color: kBlackColor),
           ),
-          SizedBox(height: kDefaultPadding / 2),
+          SizedBox(height: kDefaultPadding / 4),
           ...List.generate(
             question.options.length,
             (index) => Option(
@@ -45,6 +49,7 @@ class QuestionCard extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
   }
 }

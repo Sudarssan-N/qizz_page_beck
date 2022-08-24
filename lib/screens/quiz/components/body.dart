@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/controllers/question_controller.dart';
-import 'package:quiz_app/models/Questions.dart';
+
+//change the file name for the quiz change to Questions.dart
+//1.body.dart and 2.question_card.dart
+import 'package:quiz_app/models/Question_ham-a.dart';
 import 'package:flutter_svg/svg.dart';
 
 //import 'progress_bar.dart';
